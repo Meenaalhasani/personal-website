@@ -25,7 +25,7 @@ function App() {
 
       <section id="Resume">
         <h2>Resume</h2>
-        <a href="Meena Resume.pdf" download>Download PDF</a>
+        <a href="MeenasResume.pdf" download>Download PDF</a>
       </section>
 
       <section id="Contact">
