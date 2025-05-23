@@ -1,77 +1,209 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+/* Font imports (add to index.html <head> if not already there) */
+/* <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poetsen+One&family=Roboto+Condensed&display=swap" rel="stylesheet"> */
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-
-body {
-  font-family: sans-serif;
+* {
   margin: 0;
   padding: 0;
-  background: #fdfdfd;
-  color: #333;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; 
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #D2B7E5;
+  color: #222;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .App {
-  padding: 2rem;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #D2B7E5;
+  padding: 0; 
+}
+
+/* ✅ NAVIGATION BAR */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #A06CD5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+.logo {
+  font-family: "Press Start 2P", monospace;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #271d46;
+  text-decoration: none; /* 🔒 prevent underline */
+
+}
+
+.logo:hover {
+  color: #271d46;            /* 🔒 prevent color change */
+  text-decoration: none;     /* 🔒 prevent underline */
+}
+
+.angle-bracket {
+  color: #a29bfe;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #dcdde1;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Press Start 2P", monospace;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* ✅ PAGE CONTENT */
+
+.container {
   max-width: 800px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
+  margin-top: 3rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+.profile-pic {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #1b1b2f;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  margin-top: 2rem;
+}
+
+.profile-pic:hover{
+  border-color: #a06cd5; 
+  transform: scale(1.02); 
 }
 
 h1 {
-  margin-bottom: 0.25rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #111;
 }
 
 h2 {
-  margin-top: 2rem;
-  color: #555;
+  font-size: 1.5rem;
+  font-family: "Poetsen One", sans-serif;
+  color: #333;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #A06CD5;
+  padding-bottom: 0.25rem;
+}
+
+p, li {
+  font-size: 1rem;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #444;
+  max-width: 700px;
+  text-align: left;
+}
+
+ul {
+  padding-left: 1.2rem;
 }
 
 a {
-  color: #0070f3;
+  color: #9163CB;
   text-decoration: none;
-  margin-right: 1rem;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #6247AA;
+  text-decoration: underline;
+}
+
+section {
+  background-color: #DEC9E9;
+  padding: 2rem;
+  border-radius: 16px;
+  margin: 5vh auto;
+  width: 700px;
+  max-width: 90vw;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  transition: transform 0.3s ease;
+  margin-top: 0rem;
+}
+
+section:hover {
+  transform: translateY(-2px);
+}
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ✅ RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+  .App {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
 }
