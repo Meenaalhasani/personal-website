@@ -15,11 +15,21 @@ html, body {
 
 }
 
+.bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  display: block;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #D2B7E5;
   color: #222;
   line-height: 1.6;
 }
@@ -32,8 +42,11 @@ html {
   width: 100vw;
   min-height: 100vh;
   background-color: #D2B7E5;
-  padding: 0; 
+  padding: 0;
+  position: relative; /* 🔧 add this */
+    z-index: 1;
 }
+
 
 /* ✅ NAVIGATION BAR */
 .topbar {
@@ -104,6 +117,7 @@ header {
   margin-top: 3rem;
   text-align: center;
   margin-bottom: 3rem;
+  z-index: 1;
 }
 
 .profile-pic {
@@ -174,6 +188,7 @@ section {
   text-align: left;
   transition: transform 0.3s ease;
   margin-top: 0rem;
+  z-index: 1;
 }
 
 section:hover {
