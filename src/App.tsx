@@ -40,8 +40,8 @@ function App() {
         // If mouse is within 100px, apply repulsion
         if (dist < 100 && dist > 0) {
           const force = 1 - dist / 100;
-          p.dx += (dx / dist) * force * 0.5;
-          p.dy += (dy / dist) * force * 0.5;
+          p.dx += (dx / dist) * force * 0.1;
+          p.dy += (dy / dist) * force * 0.1;
         }
   
         p.x += p.dx;
@@ -83,6 +83,7 @@ function App() {
         </div>
       </nav>
       <canvas id="bg-canvas" className="bg-canvas"></canvas>
+      <div className="easter-egg">can you tell my favorite color is purple?</div>
       <div className="container">
         <header>
           <h1>Hi, I’m Meena Al Hasani 👩‍💻</h1>

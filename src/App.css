@@ -41,10 +41,28 @@ html {
 .App {
   width: 100vw;
   min-height: 100vh;
-  background-color: #D2B7E5;
+  background-color: #c8acdc;
   padding: 0;
   position: relative; /* 🔧 add this */
     z-index: 1;
+}
+
+.easter-egg {
+  position:absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: #9163CB;
+  opacity: 0.15;
+  font-family: "Caveat", cursive;
+  pointer-events: auto; /* 👈 enable hover detection */
+  user-select: none;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.easter-egg:hover {
+  opacity: 0.6;
 }
 
 
