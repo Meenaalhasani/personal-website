@@ -12,13 +12,16 @@ function App() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   
-    const particles = Array.from({ length: 60 }, () => ({
+    const particles = Array.from({ length: 500 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      dx: Math.random() - 0.5,
-      dy: Math.random() - 0.5,
+      vx: (Math.random() - 0.5) * 0.5,  // base gentle drift
+      vy: (Math.random() - 0.5) * 0.5,
+      dx: 0, // dynamic repulsion push
+      dy: 0,
       size: Math.random() * 2 + 1,
     }));
+    
   
     const mouse = { x: 0, y: 0 };
   
@@ -30,35 +33,61 @@ function App() {
     window.addEventListener("mousemove", handleMouseMove);
   
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
+      ctx!.clearRect(0, 0, canvas.width, canvas.height);
+    
       for (const p of particles) {
         const dx = p.x - mouse.x;
         const dy = p.y - mouse.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
-  
-        // If mouse is within 100px, apply repulsion
+    
+        // Repel if close
         if (dist < 100 && dist > 0) {
           const force = 1 - dist / 100;
-          p.dx += (dx / dist) * force * 0.1;
-          p.dy += (dy / dist) * force * 0.1;
+          p.dx += (dx / dist) * force * 0.6;
+          p.dy += (dy / dist) * force * 0.6;
         }
-  
-        p.x += p.dx;
-        p.y += p.dy;
-  
+    
+        // Slowly decay repulsion push
+        p.dx *= 0.98;
+        p.dy *= 0.98;
+    
+        // Final movement = base drift + temporary push
+        p.x += p.vx + p.dx;
+        p.y += p.vy + p.dy;
+    
         // Bounce off edges
-        if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
-        if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
-  
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(255, 255, 255, 0.6)";
-        ctx.fill();
+        if (p.x < 0) {
+          p.x = 0;
+          p.vx *= -1;
+          p.dx *= -0.5;
+        }
+        if (p.x > canvas.width) {
+          p.x = canvas.width;
+          p.vx *= -1;
+          p.dx *= -0.5;
+        }
+        if (p.y < 0) {
+          p.y = 0;
+          p.vy *= -1;
+          p.dy *= -0.5;
+        }
+        if (p.y > canvas.height) {
+          p.y = canvas.height;
+          p.vy *= -1;
+          p.dy *= -0.5;
+        }
+        
+    
+        ctx!.beginPath();
+        ctx!.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx!.fillStyle = "rgba(255, 255, 255, 0.6)";
+        ctx!.fill();
       }
-  
+    
       requestAnimationFrame(animate);
     };
+    
+    
   
     animate();
   
