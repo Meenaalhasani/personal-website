@@ -235,6 +235,7 @@ section:hover {
 
 .App.dark .nav-links a,
 .App.dark .logo,
+.App.dark .logo:hover,
 .App.dark h1,
 .App.dark h2,
 .App.dark p,
@@ -268,10 +269,6 @@ section:hover {
   outline: none !important;
   box-shadow: none !important;
   margin-top: -.5rem;
-}
-
-.theme-toggle:hover {
-  background-color: #ffffff40;
 }
 
 .theme-toggle:focus,
