@@ -163,25 +163,27 @@ function App() {
               <strong>Resume Website</strong> — The site you're on! Built with React + Vite to showcase my work and style.
             </li>
             <li>
-              <strong>ZooDB</strong> — ASP.NET Core web app with Azure SQL backend. Role-based login and inventory tools.
+              <strong>Zoo DataBase Web Application</strong> — ASP.NET Core web app with Azure SQL backend. Role-based login and inventory tools.
             </li>
             <li>
-              <strong>EventMatch</strong> — Volunteer-event matching system using Node.js + MySQL backend and JWT-auth frontend.
+              <strong>Volunteer Web Portal </strong> — Volunteer-event matching system using Node.js + MySQL backend and JWT-auth frontend.
             </li>
             <li>
-              <strong>StockVision</strong> — GRU model predicting daily AAPL, MSFT, and AMZN prices with less than 2.2% MAPE.
+              <strong>Stock Price Prediction </strong> — GRU model predicting daily AAPL, MSFT, and AMZN prices with less than 2.2% MAPE.
             </li>
             <li>
-              <strong>UnemployCast</strong> — LSTM/GRU models forecasting U.S. unemployment by industry using TensorFlow.
+              <strong>Unemployment Forecasting</strong> — LSTM/GRU models forecasting U.S. unemployment by industry using TensorFlow.
             </li>
             <li>
-              <strong>SpaceView</strong> — 3D globe tool for visualizing global space debris data in WebGL.
+              <strong>Space Debris Visualization Tool</strong> — 3D globe tool for visualizing global space debris data in WebGL.
             </li>
             <li>
               <strong>Rocket Game</strong> — C++/SDL game simulating gravity, collisions, and scoring with OOP design.
             </li>
+            <li>
+              <strong>Hurricane Impact Analysis </strong> — Modeled 2021 Gulf Coast hurricane risk using regression, clustering, and GIS to identify intensity hotspots and storm pattern shifts.
+            </li>
           </ul>
-
         </section>
 
         <section id="resume">
