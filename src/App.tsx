@@ -195,7 +195,7 @@ function App() {
           <h2>Fun Facts</h2>
           <ul>
             <li>Iraqi born, raised in Egypt, based in Houston</li>
-            <li>Probably playing Roblox</li>
+            <li>Always curious, often deep in a research rabbit hole</li>
             <li>I love UI/UX as much as backend logic</li>
           </ul>
         </section>
@@ -206,6 +206,7 @@ function App() {
           <p>
             <a href="https://github.com/Meenaalhasani" target="_blank" rel="noreferrer">GitHub</a> |  
             <a href="https://linkedin.com/in/meenaalhasani" target="_blank" rel="noreferrer"> LinkedIn</a>
+            <a>Phone number: (832) 807-3441</a>
           </p>
         </section>
       </div>
