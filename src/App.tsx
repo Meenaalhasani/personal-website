@@ -187,7 +187,7 @@ function App() {
         <section id="resume">
           <h2>Resume</h2>
           <p>
-            <a href="/MeenaResume.pdf" download type="application/pdf">Download My Resume</a>
+            <a href="/MeenaAResume.pdf" download type="application/pdf">Download My Resume</a>
           </p>
         </section>
 
