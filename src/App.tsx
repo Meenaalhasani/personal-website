@@ -205,8 +205,8 @@ function App() {
           <p><strong>Email:</strong> <a href="mailto:meenaalhasani1@gmail.com">meenaalhasani1@gmail.com</a></p>
           <p>
             <a href="https://github.com/Meenaalhasani" target="_blank" rel="noreferrer">GitHub</a> |  
-            <a href="https://linkedin.com/in/meenaalhasani" target="_blank" rel="noreferrer"> LinkedIn</a>
-            <a>Phone number: (832) 807-3441</a>
+            <a href="https://linkedin.com/in/meenaalhasani" target="_blank" rel="noreferrer"> LinkedIn</a> | 
+            <a>(832) 807-3441</a>
           </p>
         </section>
       </div>
