@@ -206,7 +206,7 @@ function App() {
           <p>
             <a href="https://github.com/Meenaalhasani" target="_blank" rel="noreferrer">GitHub</a> |  
             <a href="https://linkedin.com/in/meenaalhasani" target="_blank" rel="noreferrer"> LinkedIn</a> | 
-            <a>(832) 807-3441</a>
+            <a> (832) 807-3441</a>
           </p>
         </section>
       </div>
